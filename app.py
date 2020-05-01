@@ -21,20 +21,23 @@ def send():
 
         if request.form['inch']:
             inch = float(request.form['inch'])
-            to_mm = f'{inch * 25.4} mm'
+            mm = inch * 25.4
+            to_mm = f'{inch * 25.4:.5} mm'
             return render_template('app.html', to_mm=to_mm)
         if request.form['mm']:
             mm = float(request.form['mm'])
-            to_inch = f'{mm / 25.4} in'
+            to_inch = f'{mm / 25.4:.5} in'
             return render_template('app.html', to_inch=to_inch)
-        if request.form['pound']:
-            pound = float(request.form['pound'])
-            result = f'{pound / 2.20462} mm'
-            return render_template('app.html', result=result)
-        if request.form['kg']:
-            kg = float(request.form['kg'])
-            result = f'{kg * 2.20462} mm'
-            return render_template('app.html', result=result)
+        if request.form['lbf']:
+            lbf = float(request.form['lbf'])
+            to_kgf = f'{lbf / 2.20462:.5} kgf'
+            to_N = f'{lbf * 4.44822:.5} N'
+            return render_template('app.html', to_kgf=to_kgf, lbf_to_N=to_N)
+        if request.form['kgf']:
+            kgf = float(request.form['kgf'])
+            to_lbf = f'{kgf * 2.20462:.5} lbf'
+            to_N = f'{kgf * 9.80665:.5} N'
+            return render_template('app.html', to_lbf=to_lbf, kgf_to_N=to_N)
         else:
             return render_template('app.html')
 

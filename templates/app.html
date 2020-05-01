@@ -36,20 +36,23 @@
         <input type="text" placeholder="0.00" class="u-half-width" name="mm"/>
         <input type="submit" value="To [inch]" id="calc_btn_mm" />
         <span class="alert"> {{ to_inch }} </span>
-      </form>
 
-      <form action="/send" method="POST">
-        <h5>Weight</h5>
+<!--      </form>-->
+<!--      <form action="/send" method="POST">-->
+
+        <h5>Force</h5>
         <!-- Pound-Pound-Pound -->
-        <label for="pound">pound</label>
-        <input type="text" placeholder="0.00" class="u-half-width" name="pound"/>
-        <input type="submit" value="To [kg]" id="calc_btn_pound" />
-        <span class="alert"> {{ to_kg }} </span>
+        <label for="lbf">lbf</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="lbf"/>
+        <input type="submit" value="To [kgf]" id="calc_btn_pound" />
+        <span class="alert"> {{ to_kgf }} </span>
+        <span class="alert"> {{ lbf_to_N }} </span>
         <!-- KG-KG-KG -->
-        <label for="kg">kg</label>
-        <input type="text" placeholder="0.00" class="u-half-width" name="kg"/>
-        <input type="submit" value="To [pound]" id="calc_btn_kg" />
-        <span class="alert"> {{ to_pound }} </span>
+        <label for="kgf">kgf</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="kgf"/>
+        <input type="submit" value="To [lbf]" id="calc_btn_kg" />
+        <span class="alert"> {{ to_lbf }} </span>
+        <span class="alert"> {{ kgf_to_N }} </span>
       </form>
 </body>
 </html>
