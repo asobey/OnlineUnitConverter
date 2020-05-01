@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- REFERENCE https://www.youtube.com/watch?v=ia0rvIfxPFc -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Why Are We Still Doing This? Conversion App</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="Sobey" content="Calculations">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <style>
+    .alert {
+      background: green;
+      padding: 1rem;
+      border-radius: 5px;
+      color: white;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Container">
+    <h3>Why Are We Still Doing This? Coversion App</h3>
+  </div>
+  <!-- Form -->
+      <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="Number One">First Number</label>
+        <input
+          type="text"
+          placeholder="First Number"
+          class="u-half-width"
+          name="num1"
+        />
+
+        <label for="Number Two">Second Number</label>
+        <input
+          type="text"
+          placeholder="Second Number"
+          class="u-half-width"
+          name="num2"
+        />
+
+        <label for="Operation">Operation</label>
+        <select class="u-half-width" name="operation">
+          <option value="add">Add</option>
+          <option value="subtract">Subtract</option>
+          <option value="multiply">Multiply</option>
+          <option value="divide">Divide</option>
+        </select>
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ result }}
+        </div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Why Are We Still Doing This? Conversion App</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="Sobey" content="Calculations">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <style>
+    .alert {
+      background: green;
+      padding: 1rem;
+      border-radius: 5px;
+      color: white;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Container">
+    <h3>Why Are We Still Doing This? Conversion App</h3>
+  </div>
+  <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <h5>Length</h5>
+        <!-- INCH-INCH-INCH -->
+        <label for="inch">inch</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="inch"/>
+        <input type="submit" value="To [mm]" id="calc_btn_in" />
+        <span class="alert"> {{ to_mm }} </span>
+        <!-- INCH-INCH-INCH -->
+        <label for="mm">mm</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="mm"/>
+        <input type="submit" value="To [inch]" id="calc_btn_mm" />
+        <span class="alert"> {{ to_inch }} </span>
+      </form>
+
+      <form action="/send" method="POST">
+        <h5>Weight</h5>
+        <!-- Pound-Pound-Pound -->
+        <label for="pound">pound</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="pound"/>
+        <input type="submit" value="To [kg]" id="calc_btn_pound" />
+        <span class="alert"> {{ to_kg }} </span>
+        <!-- KG-KG-KG -->
+        <label for="kg">kg</label>
+        <input type="text" placeholder="0.00" class="u-half-width" name="kg"/>
+        <input type="submit" value="To [pound]" id="calc_btn_kg" />
+        <span class="alert"> {{ to_pound }} </span>
+      </form>
+</body>
+</html>
