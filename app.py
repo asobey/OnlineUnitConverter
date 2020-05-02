@@ -1,3 +1,5 @@
+#!python3
+
 from flask import Flask, render_template, request
 # import logging
 
@@ -18,15 +20,17 @@ def main():
 def send():
     if request.method == 'POST':
         # app.logger.info('INCH===============' + request.form['inch'])
-
+        sig_figs = 5
+        if request.form['Significant_Figures']:
+            sig_figs = float(request.form['Significant_Figures'])
         if request.form['inch']:
             inch = float(request.form['inch'])
             mm = inch * 25.4
-            to_mm = f'{inch * 25.4:.5} mm'
+            to_mm = f'{inch * 25.4:.sig_figs} mm'
             return render_template('app.html', to_mm=to_mm)
         if request.form['mm']:
             mm = float(request.form['mm'])
-            to_inch = f'{mm / 25.4:.5} in'
+            to_inch = f'{mm / 25.4:.sig_figs} in'
             return render_template('app.html', to_inch=to_inch)
         if request.form['lbf']:
             lbf = float(request.form['lbf'])

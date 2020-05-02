@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Why Are We Still Doing This? Conversion App</title>
+  <title>Slightly Easier Unit Converter</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="Sobey" content="Calculations">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
@@ -53,6 +53,11 @@
         <input type="submit" value="To [lbf]" id="calc_btn_kg" />
         <span class="alert"> {{ to_lbf }} </span>
         <span class="alert"> {{ kgf_to_N }} </span>
+
+<!--        SIG FIGS-->
+        <label for="Significant_Figures">Significant Figures</label>
+        <input type="text" placeholder="5" class="u-half-width" name="Significant_Figures" size="1"/>
+
       </form>
 </body>
 </html>
