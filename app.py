@@ -2,9 +2,9 @@
 
 from flask import Flask, render_template, request
 from simpleeval import simple_eval
-# import logging
+import logging
 
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 # Declare the App
 app = Flask(__name__)
@@ -20,7 +20,8 @@ def main():
 @app.route('/send', methods=['POST'])
 def send():
     if request.method == 'POST':
-        # app.logger.info('INCH===============' + request.form['inch'])
+        app.logger.info(f'REQUEST FORM: {request.method}')
+        # print((f'REQUEST FORM: {request.form}'))
         sig_figs = 5
         if request.form['Significant_Figures']:
             sig_figs = float(request.form['Significant_Figures'])
