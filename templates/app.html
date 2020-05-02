@@ -21,25 +21,25 @@
 
 <body style="font-size:xx-small">
   <div class="Container">
-    <h3>Slightly Easier Unit Converter</h3>
-    <h8>Sobeyworks</h8>
+    <h4>Slightly Easier Unit Converter</h4>
+    <h7>Sobeyworks</h7>
   </div>
   <!-- Form -->
     <div class="container">
       <form action="/send" method="POST">
-        <hr>
+<!--        <hr>-->
         <div class="row">
           <div class="five columns">
             <h5>Length</h5>
             <!-- INCH-INCH-INCH -->
             <label for="inch">inch</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="inch" size="5"/>
-            <input type="submit" value="To [mm] " id="calc_btn_in" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [mm] " id="calc_btn_in" style="height:36px; width:100px; font-size:xx-small"/>
             <span class="alert"> {{ to_mm }} </span>
             <!-- INCH-INCH-INCH -->
             <label for="mm">mm</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="mm" size="5"/>
-            <input type="submit" value="To [inch]" id="calc_btn_mm" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [inch]" id="calc_btn_mm" style="height:36px; width:100px; font-size:xx-small"/>
             <span class="alert"> {{ to_inch }} </span>
 
           </div>
@@ -48,13 +48,13 @@
             <!-- Pound-Pound-Pound -->
             <label for="lbf">lbf</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="lbf" size="5"/>
-            <input type="submit" value="To [kgf]" id="calc_btn_pound" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [kgf]" id="calc_btn_pound" style="height:36px; width:90px; font-size:xx-small"/>
             <span class="alert"> {{ to_kgf }} </span>
             <span class="alert"> {{ lbf_to_N }} </span>
             <!-- KG-KG-KG -->
             <label for="kgf">kgf</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="kgf" size="5"/>
-            <input type="submit" value="To [lbf]" id="calc_btn_kg" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [lbf]" id="calc_btn_kg" style="height:36px; width:90px; font-size:xx-small"/>
             <span class="alert"> {{ to_lbf }} </span>
             <span class="alert"> {{ kgf_to_N }} </span>
            </div>
@@ -66,13 +66,13 @@
             <!-- F-F-F -->
             <label for="F">F</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="F" size="5"/>
-            <input type="submit" value="To [C], [K]" id="calc_btn_F" style="height:40px; width:120px; font-size:xx-small"/>
+            <input type="submit" value="To [C]" id="calc_btn_F" style="height:36px; width:90px; font-size:xx-small"/>
             <span class="alert"> {{ to_C }} </span>
             <span class="alert"> {{ to_K }} </span>
             <!-- C-C-C -->
             <label for="C">C</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="C" size="5"/>
-            <input type="submit" value="To [F], [K]" id="calc_btn_C" style="height:40px; width:120px; font-size:xx-small"/>
+            <input type="submit" value="To [F]" id="calc_btn_C" style="height:36px; width:90px; font-size:xx-small"/>
             <span class="alert"> {{ to_F }} </span>
             <span class="alert"> {{ C_to_K }} </span>
            </div>
@@ -82,13 +82,13 @@
             <!-- psi-psi-psi -->
             <label for="psi">psi</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="psi" size="5"/>
-            <input type="submit" value="To [MPa]" id="calc_btn_psi" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [MPa]" id="calc_btn_psi" style="height:36px; width:100px; font-size:xx-small"/>
             <span class="alert"> {{ to_Pa }} </span>
             <span class="alert"> {{ to_MPa }} </span>
             <!-- Pa-Pa-Pa -->
             <label for="Pa">Pa</label>
             <input type="text" placeholder="0.00" class="u-half-width" name="Pa" size="5"/>
-            <input type="submit" value="To [psi]" id="calc_btn_Mpa" style="height:40px; width:100px; font-size:xx-small"/>
+            <input type="submit" value="To [psi]" id="calc_btn_Mpa" style="height:36px; width:100px; font-size:xx-small"/>
             <span class="alert"> {{ to_psi }} </span>
             <span class="alert"> {{ to_ksi }} </span>
           </div>
