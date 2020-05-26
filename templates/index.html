@@ -1,38 +1,11 @@
-<!doctype html>
+{% extends "layout.html" %}
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Sobey</title>
-  <meta name="description" content="Web app to simplify unit conversion">
-  <meta name="Sobey" content="Calculations">
-<!--  <link rel="shortcut icon" href="static/img/favicon.ico">-->
-<!--  <link rel="shortcut icon" type="image/png" href="static/img/favicon-32x32.png">-->
-  <link rel="shortcut icon" type="image/png" ref="{{ url_for('static', filename='favicon.ico') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-<!--  <link rel="stylesheet" href="static/css/main.css">-->
+{% block content %}
 
-  <style>
-    .alert {
-      background: green;
-      padding: 1rem;
-      border-radius: 5px;
-      color: white;
-      margin: 1rem;
-    }
-    input, .alert {font-size:xx-small; }
-  </style>
-</head>
-
-<body>
-  <div class="Container">
-    <h4>Slightly Easier Unit Converter</h4>
-    <h7>Sobeyworks</h7>
-  </div>
   <!-- Form -->
     <div class="container">
       <form action="/send" method="POST">
-<!--        <hr>-->
+    <!--        <hr>-->
         <div class="row">
           <div class="five columns">
             <h5>Length</h5>
@@ -99,7 +72,7 @@
           </div>
         </div>
         <hr>
-<!--        SIG FIGS-->
+    <!--        SIG FIGS-->
         <label for="Significant_Figures">Significant Figures</label>
         <input type="text" placeholder="4" class="u-half-width" name="Significant_Figures" size="1"/>
         </form>
@@ -112,6 +85,4 @@
       <p>* 	multiple one thing by another x * y 10 * 10 -> 100</p>
       <p>** 	‘to the power of’ x**y 2 ** 10 -> 1024</p>
       <p>% 	modulus. (remainder) x % y 15 % 4 -> 3</p>
-
-</body>
-</html>
+{% endblock content %}

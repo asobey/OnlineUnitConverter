@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sobey</title>
+  <meta name="description" content="Engineering slightly simpler">
+  <meta name="Sobey" content="Calculations">
+<!--  <link rel="shortcut icon" href="static/img/favicon.ico">-->
+<!--  <link rel="shortcut icon" type="image/png" href="static/img/favicon-32x32.png">-->
+  <link rel="shortcut icon" type="image/png" ref="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+<!--  <link rel="stylesheet" href="static/css/main.css">-->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+
+  <style>
+    .alert {
+      background: green;
+      padding: 1rem;
+      border-radius: 5px;
+      color: white;
+      margin: 1rem;
+    }
+    input, .alert {font-size:xx-small; }
+  </style>
+</head>
+
+<body>
+  <div class="Container">
+    <h4>Slightly Easier Unit Converter</h4>
+    <h7>Sobeyworks</h7>
+  </div>
+  <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+<!--        <hr>-->
+        <div class="row">
+          <div class="five columns">
+            <h5>Length</h5>
+            <!-- INCH-INCH-INCH -->
+            <label for="inch">inch</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="inch" size="5"/>
+            <input type="submit" value="To [mm] " id="calc_btn_in" style="height:36px; width:100px; font-size:xx-small"/>
+            <span class="alert"> {{ to_mm }} </span>
+            <!-- INCH-INCH-INCH -->
+            <label for="mm">mm</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="mm" size="5"/>
+            <input type="submit" value="To [inch]" id="calc_btn_mm" style="height:36px; width:100px; font-size:xx-small"/>
+            <span class="alert"> {{ to_inch }} </span>
+
+          </div>
+          <div class="seven columns">
+            <h5>Force</h5>
+            <!-- Pound-Pound-Pound -->
+            <label for="lbf">lbf</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="lbf" size="5"/>
+            <input type="submit" value="To [kgf]" id="calc_btn_pound" style="height:36px; width:90px; font-size:xx-small"/>
+            <span class="alert"> {{ to_kgf }} </span>
+            <span class="alert"> {{ lbf_to_N }} </span>
+            <!-- KG-KG-KG -->
+            <label for="kgf">kgf</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="kgf" size="5"/>
+            <input type="submit" value="To [lbf]" id="calc_btn_kg" style="height:36px; width:90px; font-size:xx-small"/>
+            <span class="alert"> {{ to_lbf }} </span>
+            <span class="alert"> {{ kgf_to_N }} </span>
+           </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="six columns">
+            <h5>Temperature</h5>
+            <!-- F-F-F -->
+            <label for="F">F</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="F" size="5"/>
+            <input type="submit" value="To [C]" id="calc_btn_F" style="height:36px; width:90px; font-size:xx-small"/>
+            <span class="alert"> {{ to_C }} </span>
+            <span class="alert"> {{ to_K }} </span>
+            <!-- C-C-C -->
+            <label for="C">C</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="C" size="5"/>
+            <input type="submit" value="To [F]" id="calc_btn_C" style="height:36px; width:90px; font-size:xx-small"/>
+            <span class="alert"> {{ to_F }} </span>
+            <span class="alert"> {{ C_to_K }} </span>
+           </div>
+
+          <div class="six columns">
+            <h5>Pressure</h5>
+            <!-- psi-psi-psi -->
+            <label for="psi">psi</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="psi" size="5"/>
+            <input type="submit" value="To [MPa]" id="calc_btn_psi" style="height:36px; width:100px; font-size:xx-small"/>
+            <span class="alert"> {{ to_Pa }} </span>
+            <span class="alert"> {{ to_MPa }} </span>
+            <!-- Pa-Pa-Pa -->
+            <label for="Pa">Pa</label>
+            <input type="text" placeholder="0.00" class="u-half-width" name="Pa" size="5"/>
+            <input type="submit" value="To [psi]" id="calc_btn_Mpa" style="height:36px; width:100px; font-size:xx-small"/>
+            <span class="alert"> {{ to_psi }} </span>
+            <span class="alert"> {{ to_ksi }} </span>
+          </div>
+        </div>
+        <hr>
+<!--        SIG FIGS-->
+        <label for="Significant_Figures">Significant Figures</label>
+        <input type="text" placeholder="4" class="u-half-width" name="Significant_Figures" size="1"/>
+        </form>
+      <img src="/static/img/squirrel.jpg" alt="squirrel" style="width:400px;height:400px;">
+      <hr>
+      <h5>AVAILABLE INPUT OPERATIONS</h5>
+      <p>+ 	add two things. x + y 1 + 1 -> 2</p>
+      <p>- 	subtract two things x - y 100 - 1 -> 99</p>
+      <p>/ 	divide one thing by another x / y 100/10 -> 10</p>
+      <p>* 	multiple one thing by another x * y 10 * 10 -> 100</p>
+      <p>** 	‘to the power of’ x**y 2 ** 10 -> 1024</p>
+      <p>% 	modulus. (remainder) x % y 15 % 4 -> 3</p>
+
+</body>
+</html>
