@@ -1,5 +1,4 @@
 #!python3
-
 from flask import Flask, render_template, request
 from simpleeval import simple_eval
 import logging
